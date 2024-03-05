@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UVER | Login</title>
+
+  <script src="https://kit.fontawesome.com/8114a7cb4e.js" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+
+<body class="d-flex vh-100" style="background-image: url(/fondoLogin.jpg); background-size: cover;">
+
+  <div class="card bg-secondary bg-opacity-25 m-auto" style="width: 28rem;">
+    <div class="card-header">
+      <h4 class="fw-bold">CREAR CUENTA</h4>
+    </div>
+    <div class="card-body">
+      <div class="input-group my-2 px-2">
+        <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+        <input type="text" id="inputUsername" class="form-control" placeholder="Username">
+      </div>
+      <div class="input-group my-2 px-2">
+        <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+        <input type="text" id="inputPassword" class="form-control" placeholder="Password">
+      </div>
+
+      <div class="ms-2">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" name="checkboxRole" data-value="CLIENTE" type="checkbox" onchange="checkboxRole(this)" id="checkboxCliente">
+          <label class="form-check-label" for="checkboxCliente">Cliente</label>
+        </div>
+        <div class="form-check form-check-inline mx-2">
+          <input class="form-check-input" name="checkboxRole" data-value="CHOFER" onchange="checkboxRole(this)" type="checkbox" id="checkboxChofer">
+          <label class="form-check-label" for="checkboxChofer">Chofer</label>
+        </div>
+      </div>
+
+      <div class="input-group my-2 px-2">
+        <span class="input-group-text"><i class="fa-solid fa-id-card"></i></span>
+        <input type="text" id="inputCedula" class="form-control" placeholder="Cedula">
+      </div>
+      <div class="input-group my-2 px-2">
+        <span class="input-group-text"><i class="fa-solid fa-n"></i></span>
+        <input type="text" id="inputNombres" class="form-control" placeholder="Nombres">
+      </div>
+      <div class="input-group my-2 px-2">
+        <span class="input-group-text"><i class="fa-solid fa-a"></i></span>
+        <input type="text" id="inputApellidos" class="form-control" placeholder="Apellidos">
+      </div>
+      <div class="input-group my-2 px-2">
+        <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+        <input type="text" id="inputCorreo" class="form-control" placeholder="Correo Electronico">
+      </div>
+      <div class="input-group my-2 px-2">
+        <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
+        <input type="text" id="inputTelefono" class="form-control" placeholder="Telefono">
+      </div>
+      <div class="input-group my-2 px-2" id="containerDireccion">
+        <span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
+        <input type="text" id="inputDireccion" class="form-control" placeholder="Direccion">
+      </div>
+      <div class="input-group my-2 px-2">
+        <span class="input-group-text"><i class="fa-solid fa-cake-candles"></i></span>
+        <input type="date" id="inputFechaDeNacimiento" class="form-control" placeholder="Fecha de Nacimiento">
+      </div>
+      <div class="input-group my-2 px-2">
+        <label class="input-group-text" for="selectGenero">Genero:</label>
+        <select class="form-select" id="selectGenero">
+          <option value="MASCULINO" selected>MASCULINO</option>
+          <option value="FEMENINO">FEMENINO</option>
+        </select>
+      </div>
+    </div>
+    <div class="card-footer">
+      <button type="button" class="btn btn-success" id="botonCrearCuenta">Crear Cuenta</button>
+      <a class="text-decoration-none ms-2" href="/login.html">Iniciar Sesion</a>
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="/js/signup.js"></script>
+</body>
+
+</html>

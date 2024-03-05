@@ -1,0 +1,11 @@
+USUARIO
+-Crear Usuario Empleado Administrativo (Se crea un usuario y despues se crea el empleado Administrativo)
+-Crear Usuario Chofer (Se crea un usuario y despues se crea el Chofer)
+-Crear Usuario Cliente (Se crea un usuario y despues se crea el cliente) 
+-Buscar Usuario
+
+RECARGAS
+-Crear Recarga (Al crear una Recarga se debe de Crear al mismo tiempo un Pago)
+-Consultar Recarga (Al pedir la recarga tambien debe incluir el pago)
+-Modificar Recarga 1 (Solo permitira modificar los valores de saldo en la entidad recarga, y los valores de monto y estado en la entidad pago)
+

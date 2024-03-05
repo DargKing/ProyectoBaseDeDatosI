@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UVER | Recargas</title>
+
+    <script src="https://kit.fontawesome.com/8114a7cb4e.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body class="bg-secondary bg-opacity-25 pb-2" style="background-image: url(/fondoLogin.jpg); background-size: cover;">
+
+    <nav class="navbar navbar-expand-lg bg-light mb-4">
+        <div class="container-fluid">
+            <span class="navbar-brand">UVER</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active text-secondary" aria-current="page"
+                            href="/cliente/traslado.html">Traslado</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" aria-current="page"
+                            href="/cliente/historialTraslado.html">Historial de Traslado</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="/cliente/recarga.html">Recarga</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav">
+                    <li id="saldo" class="nav-item me-2 fw-light p-2">
+                        Saldo: 35 Bs
+                    </li>
+                    <li id="cerrarSesion" role="button" class="nav-item">
+                        <a class="nav-link">Cerrar Sesion</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="card mx-auto col-10 col-md-4 mb-4">
+        <div class="card-header">
+            <h4 class="fw-bold">DATOS PARA TRANSFERENCIAS</h4>
+        </div>
+        <div class="card-body">
+            <dt class="fw-semibold">Numero de Cuenta:</dt>
+            <dd>0000-1111-2222-4444</dd>
+
+            <dt class="fw-semibold">Cedula:</dt>
+            <dd>J-31782211-9</dd>
+
+            <dt class="fw-semibold">Titular:</dt>
+            <dd>UVER, C.A.</dd>
+        </div>
+    </div>
+
+    <div id="cardRecargas" class="card m-auto col-10 mb-4">
+        <div class="card-header">
+            <h4 class="fw-bold">REGISTRAR RECARGA</h4>
+        </div>
+        <div class="card-body">
+            <div class="mb-3">
+                <label for="inputNumeroDeReferencia" class="form-label">Numero de Referencia de la
+                    Transferencia:</label>
+                <input type="text" class="form-control" id="inputNumeroDeReferencia" placeholder="Ej: 3456422">
+            </div>
+
+            <div class="mb-3">
+                <label for="inputCedulaTitular" class="form-label">Cedula del Titular de la Cuenta:</label>
+                <input type="text" class="form-control" id="inputCedulaTitular" placeholder="Ej: V-30453555">
+            </div>
+            <div class="mb-3">
+                <label for="inputFechaDePago" class="form-label">Fecha de Pago:</label>
+                <input type="date" class="form-control" id="inputFechaDePago">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Banco:</label>
+                <select id="selectBanco" class="form-select" aria-label="BANESCO">
+                    <option value="BANESCO">BANESCO</option>
+                    <option value="BANCAMIGA">BANCAMIGA</option>
+                    <option value="BANCO DE VENEZUELA">BANCO DE VENEZUELA</option>
+                    <option value="BANCO MERCANTIL">BANCO MERCANTIL</option>
+                    <option value="BANCO NACIONAL DE CREDITO">BANCO NACIONAL DE CREDITO</option>
+                </select>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-success" id="botonRegistrarRecarga" type="button">Registrar Recarga</button>
+        </div>
+    </div>
+
+    <div id="cardHistorialRecargas" class="card m-auto col-10">
+        <div class="card-header">
+            <h4 class="fw-bold">
+                Historial Recargas
+            </h4>
+        </div>
+        <div class="card-body">
+            <div>
+                <div class="col-3 mb-2">
+                    <div class="mb-2">
+                        <label for="selectDesde">Desde:</label>
+                        <div class="row">
+                            <div class="col-6">
+                                <input type="text" placeholder="Año" value="2024"
+                                    class="form-control form-control-sm" id="inputAñoDesde">
+                            </div>
+                            <div class="col-6 ms-auto">
+                                <select class="form-select form-select-sm" id="selectMesDesde">
+                                    <option value="01" selected>Enero</option>
+                                    <option value="02">Febrero</option>
+                                    <option value="03">Marzo</option>
+                                    <option value="04">Abril</option>
+                                    <option value="05">Mayo</option>
+                                    <option value="06">Junio</option>
+                                    <option value="07">Julio</option>
+                                    <option value="08">Agosto</option>
+                                    <option value="09">Septiembre</option>
+                                    <option value="10">Octubre</option>
+                                    <option value="11">Noviembre</option>
+                                    <option value="12">Diciembre</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <label for="inputAñoHasta">Hasta:</label>
+                        <div class="row">
+                            <div class="col-6">
+                                <input type="text" placeholder="Año" value="2024"
+                                    class="form-control form-control-sm" id="inputAñoHasta">
+                            </div>
+                            <div class="col-6 ms-auto">
+                                <select class="form-select form-select-sm" id="selectMesDesde">
+                                    <option value="01">Enero</option>
+                                    <option value="02" selected>Febrero</option>
+                                    <option value="03">Marzo</option>
+                                    <option value="04">Abril</option>
+                                    <option value="05">Mayo</option>
+                                    <option value="06">Junio</option>
+                                    <option value="07">Julio</option>
+                                    <option value="08">Agosto</option>
+                                    <option value="09">Septiembre</option>
+                                    <option value="10">Octubre</option>
+                                    <option value="11">Noviembre</option>
+                                    <option value="12">Diciembre</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" type="button">Consultar</button>
+                </div>
+                <div class="overflow-auto">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <th>Numero de Referencia Bancaria</th>
+                            <th>Saldo a Recargar</th>
+                            <th>Estado</th>
+                            <th>Fecha</th>
+                        </thead>
+                        <tbody id="bodyTablaRecargas">
+                            <tr>
+                                <td>33344</td>
+                                <td>35 Bs</td>
+                                <td>VERIFICADO</td>
+                                <td>12-02-2024</td>
+                            </tr>
+                            <tr>
+                                <td>31236</td>
+                                <td>100 Bs</td>
+                                <td>RECHAZADO</td>
+                                <td>13-02-2024</td>
+                            </tr>
+                            <tr>
+                                <td>1043</td>
+                                <td>56 Bs</td>
+                                <td>VERIFICANDO</td>
+                                <td>12-02-2024</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="btn-toolbar d-none" id="toolbarListaRecargas" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group ms-auto" role="group" aria-label="First group">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <script src="/js/cliente.js"></script>
+    <script src="/js/constantes.js"></script>
+    <script src="/js/mapa.js"></script>
+    <script src="/js/sesion.js"></script>
+    <script src="/js/cliente/recargas.js"></script>
+    </script>
+
+</body>
+
+</html>
